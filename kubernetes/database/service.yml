@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: development
+  name: database
+  labels:
+    app: database
+spec:
+  type: NodePort
+  ports:
+    - port: 5432
+  selector:
+    app: database
